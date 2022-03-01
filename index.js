@@ -3,6 +3,10 @@ const path = require('path');
 const reader = require('xlsx');
 const dir = 'results';
 
+// ==============
+// npm run start
+// ==============
+
 
 /**
  * for getting out results
@@ -24,7 +28,7 @@ if (fs.existsSync(dir)) {
 
 // function defination
 // making all directory based on .xlsx file
-function makingDirectory() {    
+function makingDirectory() {
     let data = [];
     const file = reader.readFile(FILE_NAME);
     const sheets = file.SheetNames;
@@ -45,7 +49,7 @@ function makingDirectory() {
             if (!fs.existsSync(dir)) {
                 fs.mkdirSync(dir);
             }
-            
+
             fs.mkdir(path.join(__dirname + '/results/', o.nameList),
                 { recursive: true }, (err) => {
                     if (err) {

@@ -3,6 +3,9 @@
   "version": "1.0",
   "description": "this is a folder making script.",
   "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
   "author": "kh-rakib",
   "license": "MIT",
   "private": true,
